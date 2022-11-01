@@ -11,7 +11,12 @@ html {
   p, ul {
     text-align: justify;
   }
-  
+
+  #hp  {
+    float: right;    
+     margin: 0 0 0 15px;
+    }
+    
   .mt-6 {
     margin-top: 4.5rem;
   }
