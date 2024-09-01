@@ -1,91 +1,126 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f7f8fa; /* Light background for a clean look */
+    color: #333; /* Dark text for readability */
 }
 
-/* Header */
-header {
-    background-color: #1e1e1e; /* Dark background color */
-    color: #f8f8f8; /* Light text color */
-    padding: 20px 40px;
+.navbar {
+    background-color: #ffffff; /* White background for navbar */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
+.navbar-left {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    color: #333; /* Dark text for contrast */
+}
+
+.navbar-right {
+    list-style: none;
     margin: 0;
-    letter-spacing: 2px;
+    padding: 0;
 }
 
-header nav a {
-    color: #f8f8f8;
-    text-transform: uppercase;
-    margin: 0 15px;
-    font-size: 14px;
-    font-weight: bold;
+.navbar-right li {
+    display: inline;
+    margin-right: 2rem;
+}
+
+.navbar-right a {
+    color: #333; /* Dark links */
     text-decoration: none;
-    position: relative;
-    padding-bottom: 5px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    color: #f39c12; /* Accent color on hover */
-}
-
-header nav a:after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background: #f39c12; /* Accent color for underline */
-    transition: width 0.3s;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-header nav a:hover:after {
-    width: 100%;
-}
-
-header nav .contact-btn {
-    border: 1px solid #f8f8f8;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-header nav .contact-btn:hover {
-    background-color: #f39c12;
-    border-color: #f39c12;
-    color: #1e1e1e; /* Dark text color on hover */
+.navbar-right a:hover {
+    color: #007BFF; /* Blue hover color */
 }
 
 /* Banner Section */
 .banner {
-    background-image: url('media/2.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 40vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Modern gradient background */
+    color: #ffffff;
+}
+
+.banner-content {
+    z-index: 1;
+    position: relative;
+    max-width: 800px;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.banner p {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.banner .highlight {
+    color: #ffba08; /* Highlighted text in golden yellow */
+}
+
+.banner .social-icons a {
+    color: #ffffff;
+    margin: 0 1rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.banner .social-icons a:hover {
+    color: #ffba08; /* Golden yellow hover effect */
+}
+
+.banner-buttons .btn {
+    background-color: #ffffff;
+    border: 1px solid #007BFF; /* Blue border */
+    padding: 0.7rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #007BFF; /* Blue text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-buttons .btn:hover {
+    background-color: #007BFF; /* Filled button on hover */
+    color: #ffffff; /* White text */
+}
+
+/* Particles Container */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 /* Quote Section */
 .quote {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff; /* Matching background with navbar */
+    color: #333;
     padding: 50px 20px;
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -93,17 +128,18 @@ header nav .contact-btn:hover {
 }
 
 .quote span {
+    color: #007BFF; /* Highlighted quote text */
     font-size: 32px;
 }
 
-
+/* Content Section */
 .content {
-    padding: 40px 400px;
-    text-align: center; /* Center the text */
-    background-color: #27241e; /* White background for the content section */
-    color: #eee5e5; /* Dark text color */
-    max-width: 80%; /* Set a max-width to avoid the text stretching too far */
-    margin: 0 auto; /* Center the block itself within the page */
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f7f8fa; /* Light background */
+    color: #333; /* Dark text */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .content img {
@@ -112,21 +148,20 @@ header nav .contact-btn:hover {
 }
 
 .content h3 {
-    font-size: 2em; /* Adjust font size as needed */
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .content p {
-    font-size: 1.1em; /* Adjust font size as needed */
+    font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-
 /* Portfolio Block */
 .portfolio-block {
-    background-color: #222;
-    color: #fff;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
     padding: 60px 20px;
     text-align: center;
 }
@@ -138,14 +173,13 @@ header nav .contact-btn:hover {
 }
 
 .portfolio-item {
-    background-color: #1f1f1f; /* Dark background color */
+    background-color: #f7f8fa; /* Light grey */
     padding: 20px;
     margin: 20px auto;
-    width: 80%; /* Adjust this value to control the width of the cube */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adding shadow for a cube effect */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text alignment */
-    color: #f8f8f8; /* Light text color */
+    width: 80%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px;
+    text-align: center;
 }
 
 .portfolio-item h3 {
@@ -162,7 +196,7 @@ header nav .contact-btn:hover {
 .portfolio-item a.github-link {
     display: inline-block;
     margin-top: 15px;
-    color: #f39c12;
+    color: #007BFF; /* Blue link */
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
@@ -187,8 +221,8 @@ header nav .contact-btn:hover {
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: #ffffff; /* Matching background */
+    color: #333;
     text-align: center;
     padding: 20px;
 }
@@ -198,11 +232,71 @@ footer {
 }
 
 .social-icons a {
-    color: #fff;
+    color: #333;
     margin: 0 10px;
     font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007BFF; /* Blue hover effect */
 }
 
 footer p {
     font-size: 14px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #007BFF; /* Blue button */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
+
+.error-message {
+    color: #ff0000; /* Red error message */
+    font-size: 14px;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
 }

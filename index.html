@@ -17,17 +17,25 @@
 </head>
 
 <body>
-    <header>
-        <h1>Amro Elsiddig</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact" class="contact-btn">Contact</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span class="navbar-name">Amro Elsiddig</span>
+        </div>
+        <ul class="navbar-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#Certification">Certification</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <section class="banner">
+        <div id="particles-js"></div>
+        <div class="banner-content">
+            <h2>Software Engineer | Data Scientist</h2>
+            <p>Transforming complex data into actionable insights</p>
+        </div>
     </section>
 
     <section class="quote">
@@ -84,15 +92,17 @@
             <!-- Add more portfolio items as needed -->
         </div>
     </main>
-
+    <!-- Contact Section -->
     <footer>
-        <div class="social-icons">
+        <div class="social-icons" id="contact">
             <a href="https://www.linkedin.com/in/amro-elsiddig" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/amrokamalelsiddig" target="_blank"><i class="fab fa-github"></i></a>
             <a href="mailto:amrokamalelsiddig@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
         <p>&copy; 2024 Amro Elsiddig. All rights reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
