@@ -59,7 +59,7 @@ body {
 .banner-content {
     z-index: 1;
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .banner h2 {
