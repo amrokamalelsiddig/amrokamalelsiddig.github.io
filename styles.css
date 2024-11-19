@@ -160,17 +160,21 @@ body {
 
 /* Portfolio Block */
 .portfolio-block {
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark text */
+    background-color: #ffffff; 
+    color: #333;
     padding: 60px 20px;
     text-align: center;
 }
 
 .portfolio-block h2 {
-    font-family: 'Anton', sans-serif;
+    /* font-family: 'Anton', sans-serif;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
+
+
 
 .portfolio-item {
     background-color: #f7f8fa; /* Light grey */
@@ -299,4 +303,40 @@ footer p {
 
 .error-message.visible {
     display: block;
+}
+
+.skills {
+    background-color: #f8f9fa;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.skills-category {
+    flex: 1 1 calc(33% - 2em);
+    max-width: calc(33% - 2em);
+}
+
+.skills-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.skill {
+    text-align: center;
+    width: 100px;
+}
+
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5em;
 }
